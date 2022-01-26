@@ -1,5 +1,6 @@
 package com.example.domain.posts;
 
+import com.example.domain.BaseTimeEntity;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
@@ -10,7 +11,7 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
-public class Posts {
+public class Posts extends BaseTimeEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -29,5 +30,17 @@ public class Posts {
         this.content = content;
         this.author = author;
     }
+
+    // 수정 메소드
+    public void update(String title, String content){
+        this.title = title;
+        this.content = content;
+    }
+
+
+
+
+
+
 
 }
