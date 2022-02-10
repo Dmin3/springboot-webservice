@@ -1,10 +1,11 @@
 package com.example.config.auth;
 
 import com.example.domain.user.Role;
-import lombok.RequiredArgsConstructor;
+import lombok.RequiredArgsConstructor;import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.stereotype.Component;
 
 @RequiredArgsConstructor
 @EnableWebSecurity // security 설정 활성화
